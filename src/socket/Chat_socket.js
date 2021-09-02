@@ -3,10 +3,8 @@ import { addMessage } from '../actions/index';
 import  jwt_decode from 'jwt-decode';
  
 export const handleConnect = (name, id, dispatch, from, to) => {
-    // console.log("ddddispatchhhhh", dispatch);
-    const socket = io("https://baatkre.herokuapp.com:7000", { transports : ['websocket'] });
+    const socket = io("https://baatkre.herokuapp.com/", { transports : ['websocket'] });
     socket.on('connect', () => {
-      //console.log("connected to the server via Socket.io!");
       socket.emit('joinroom',
             {
                 userName: name,
@@ -19,7 +17,6 @@ export const handleConnect = (name, id, dispatch, from, to) => {
             socket.on('receive_message', function(data){
                 const token = localStorage.getItem('token');
                 const user = jwt_decode(token);
-                //console.log("user token  checking", user);
                 if(user._id == data.from){
                     const receive = {
                         msg : data.message,
@@ -33,16 +30,13 @@ export const handleConnect = (name, id, dispatch, from, to) => {
                     }
                     dispatch(addMessage(receive))
                 }
-                //console.log("receive_message", data)
             })
            
     })
 }
 
 export const handleSendMessage = (msg,id,name, from) => {
-    const socket = io("https://baatkre.herokuapp.com:7000", { transports : ['websocket'] });
-    //console.log("message", msg);
-    //console.log("idddddd", id);
+    const socket = io("https://baatkre.herokuapp.com/", { transports : ['websocket'] });
     socket.emit('send_message', {
         message: msg,
         name: name,
