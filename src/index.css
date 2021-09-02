@@ -1,0 +1,759 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+div{
+  margin: 0px;
+  padding: 0px;
+}
+p{
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+  margin: 0px;
+  padding: 0px;
+}
+h2{
+  margin: 0px;
+  padding: 0px;
+}
+h3{
+  margin: 0px;
+  padding: 0px;
+}
+h4{
+  margin: 0px;
+  padding: 0px;
+}
+.link{
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+}
+/* Navbar Component */
+.navbar{
+  height: 100px;
+  background-color: lightgray;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  align-items: center;
+  box-shadow: 0px 15px 10px -15px #111;
+}
+.register{
+  position: fixed;
+  top: 30px;
+  right: 5vw;
+}
+.homepage{
+  position: fixed;
+  top: 30px;
+  left: 100px;
+}
+.register p, .homepage p{
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  padding: 10px;
+  color: gray;
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 10px;
+}
+.navbar div{
+  /* width: 300px; */
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar div p{
+  font-size: 40px;
+  font-weight: 600;
+}
+.homepage_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 84vh;
+}
+.homepage_title{
+  margin-top: -100px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gray;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 15px 10px -15px #111;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNiIgaGVpZ2h0PSI2Ij4KPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iI2VlZSI+PC9yZWN0Pgo8ZyBpZD0iYyI+CjxyZWN0IHdpZHRoPSIzIiBoZWlnaHQ9IjMiIGZpbGw9IiNlNmU2ZTYiPjwvcmVjdD4KPHJlY3QgeT0iMSIgd2lkdGg9IjMiIGhlaWdodD0iMiIgZmlsbD0iI2Q4ZDhkOCI+PC9yZWN0Pgo8L2c+Cjx1c2UgeGxpbms6aHJlZj0iI2MiIHg9IjMiIHk9IjMiPjwvdXNlPgo8L3N2Zz4=");
+}
+.homepage_title p{
+  font-size: 30px;
+  font-weight: 600;
+  word-spacing: 5px;
+  line-height: 45px;
+}
+.sign{
+  height: 50%;
+  width: 100px;
+  font-size: 20px;
+}
+.sign_p{
+  height: 40%;
+  width: 100px;
+  border: 1px solid gray;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.home{
+  position: fixed;
+  top: 35px;
+  left: 100px;
+  border: 1px solid gray;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+}
+/* Sign Up and Sign In Component */
+.sign_container{
+  position: fixed;
+  top: 130px;
+  left: 35%;
+  width: 450px;
+  height: auto;
+  border:2px solid gray;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 20px 25px 35px -30px #111;
+}
+.sign_top{
+  top:200px
+}
+.sign_header{
+  height: 80px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 15px 10px -15px #111;
+}
+.sign_header h1{
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  font-size: 50px;
+}
+.form_container{
+  padding: 20px;
+}
+.form_container form{
+  display: flex;
+  flex-direction: column;
+}
+.form_container form label{
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.form_container form input{
+  height: 25px;
+  margin-bottom: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+.submit_btn{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.submit_btn_input{
+  height: 35px;
+  background-color: #132dcc;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 17px;
+  border: none;
+  width: 180px;
+}
+.submit_btn p{
+  height: 30px;
+  width: 150px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
+
+/* DashBoard */
+.logout{
+  position: fixed;
+  top: 25px;
+  right: 50px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid red;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 10px;
+  color: red;
+}
+.dashboard{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.friendsList{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid black;
+  background-color: blanchedalmond;
+}
+.friends_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  background-color: lightsteelblue;
+}
+.friends_header input{
+  width: 75%;
+  height: 30px;
+  font-size: 20px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.friends_header button{
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+.friends_header div p{
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+.friends{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  overflow-y: scroll;
+}
+.friends div{
+  margin-bottom: 20px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  border:1px solid grey;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+.friends div p{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-size: 30px;
+}
+.message_container{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.message_container_p{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightsteelblue;
+  border-bottom: 2px solid black;
+  font-size: 50px;
+}
+.message{
+  width: 100%;
+  height: 62vh;
+  padding: 40px 30px 30px 30px;
+  background-color: aliceblue;
+  border-bottom: 1px solid black;
+  overflow-y:scroll;
+}
+.type_message{
+  height: 10vh;
+  width: 100%;
+  background-color: lightsteelblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.type_message input{
+  height: 32px;
+  width: 85%;
+  outline: none;
+  font-size: 20px;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+.type_message button{
+  width: auto;
+  height: 35px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.other_message{
+    height: auto;
+    float: left;
+    width: 60%;
+    border: none;
+    margin: 5px 0px;
+    border-radius: 10px;
+    font-size: 21px;
+    background-color: lightgray;
+    padding: 5px;
+}
+.self_message{
+    height: auto;
+    float: right;
+    width: 50%;
+    border: none;
+    margin: 5px 0px;
+    border-radius: 10px;
+    margin-right: 50px;
+    font-size: 21px;
+    background-color: #7dfb7d;;
+    text-align: right;
+    padding: 5px;
+}
+
+.searched{
+    position: fixed;
+    top: 102px;
+    height: 100px;
+    background-color: gray;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    padding: 10px 0px;
+
+}
+.close{
+  position: fixed;
+  top: 69px;
+  left: 23%;
+  border: 1px solid gray;
+  padding: 2px 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: red;
+  cursor: pointer;
+}
+.searched_friend{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: lightgray;
+  margin-bottom: 5px;
+}
+.searched_friend div p{
+  font-size: 20px;
+  color: white;
+}
+.searched_friend div{
+  display: flex;
+  align-items: center;
+}
+.searched_friend div button{
+    height: 25px;
+    width: 60px;
+    font-size: 18px;
+    color: blue;
+    cursor: pointer;
+}
+.smallScreen{
+  width: 100%;
+  height: 100px;
+  display: none;
+  background-color: lightsteelblue;
+}
+.showFriends{
+  border: 1px solid blue;
+  display: none;
+  padding: 3px 5px;
+  color:blue;
+  position: fixed;
+  cursor: pointer;
+}
+.showSearch{
+  display: none;
+}
+.showSearch input{
+  height: 30px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding-left: 10px;
+  width: 80%;
+  font-size: 20px;
+}
+.chattingWith{
+  position: fixed;
+  height: 40px;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #efaf6e;
+}
+.emoji_div{
+  position: fixed;
+  width: 60%;
+  height: 45%;
+  bottom: 15vh;
+}
+.emoji-mart{
+  height:100% !important;
+  width: 100% !important;
+}
+.emoji-mart-scroll{
+  height: 70% !important;
+}
+.emoji-mart-bar:last-child{
+  display: none !important;
+}
+.emoji{
+  color: blue;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.search_close{
+  padding: 2px 3px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  color: red;
+  cursor: pointer;
+}
+/* .emoji-mart{
+  position: absolute;
+} */
+/* Responsive the homePage */
+
+@media screen and (max-width: 1000px){
+  .register{
+    top:115px;
+  }
+  .sign_container{
+    left: 25%;
+  }
+  .homepage{
+    left: 30px;
+  }
+  .message_container_p{
+    font-size: 40px;
+    justify-content: start;
+    padding-left: 2vw;
+  }
+  .friends_header button{
+    font-size: 15px;
+  }
+  .logout{
+    height: 35px;
+    width: 80px;
+    right: 35px;
+  }
+  .friends div p{
+    font-size: 21px;
+  }
+  .type_message input{
+    height: 30px;
+    font-size: 18px;
+  }
+  .searched_friend div p{
+    font-size: 15px;
+  }
+  .type_message input{
+    width: 75%;
+  }
+  .self_message{
+    font-size: 18px;
+  }
+  .other_message{
+    font-size: 18px;
+  }
+  .emoji-mart-scroll{
+    height: 157px !important;
+  }
+  .emoji_div{
+    height: 35%;
+  }
+}
+@media screen and (max-width: 800px){
+  .navbar div p{
+    font-size: 35px;
+  }
+  .homepage{
+    top: 120px;
+  }
+  .sign_container{
+    left: 20%;
+  }
+  .message_container_p{
+    font-size: 35px;
+  }
+  .logout{
+    height: 30px;
+    width: 75px;
+    right: 10px;
+    font-size: 18px;
+  }
+  .friends_header button{
+    display: none;
+  }
+  .friends_header input{
+    font-size: 17px;
+    width: 100%;
+  }
+  .friends div p {
+    font-size: 18px;
+  }
+  .type_message button{
+    font-size: 18px;
+  }
+  .self_message{
+    font-size: 16px;
+  }
+  .other_message{
+    font-size: 16px;
+  }
+  .close{
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .sign_container{
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .register p{
+    padding: 5px;
+  }
+  .homepage_title{
+    margin-top: -50px;
+    width: 70%;
+  }
+  .navbar div p{
+    font-size: 30px;
+  }
+  .sign_container{
+    left: 35px
+  }
+  .navbar div h1{
+    font-size: 28px;
+  }
+  .sign_header h1{
+    font-size: 40px;
+  }
+  /* For small Screen */
+  .friendsList{
+    display: none;
+  }
+  .message_container{
+    width: 100%;
+  }
+  .message_container_p{
+    justify-content: center;
+  }
+  .showFriends{
+    display: flex;
+    position: fixed;
+    top: 35px;
+    left: 25px;
+    height: 25px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  .showSearch{
+    height: 30px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+  .message_container_p{
+    display: none;
+  }
+  .smallScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logout{
+    right: 40px;
+    top: 35px;
+  }
+  .friends{
+    position: fixed;
+    top: 135px;
+    left: 0px;
+    width: 230px;
+    height: 50vh;
+    background-color: #e4e2e2;
+    padding: 15px 10px;
+  }
+  .searched{
+    width: 60%;
+    height: 30vh;
+    top: 140px;
+  }
+  .searched_friend div p {
+    font-size: 20px;
+  }
+  .chattingWith{
+    width: 100vw;
+    font-size: 25px;
+  }
+  .emoji_div{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 500px){
+  .navbar{
+    height: 90px;
+  }
+  .navbar div p{
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .register{
+    top:125px;
+    margin-right: 0px;
+  }
+  .register p{
+    font-size: 18px;
+  }
+  .homepage_title p{
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  .sign_container{
+    width: 350px;
+    left: 8%;
+  }
+  .homepage p{
+    font-size: 18px;
+  }
+  .navbar div h1{
+    font-size: 22px;
+  }
+  .sign_header h1{
+    font-size: 35px;
+  }
+  .smallScreen{
+    align-items: flex-end;
+    padding-bottom: 10px;
+    height: 90px;
+  }
+  .showFriends{
+    top: 15px;
+  }
+  .logout{
+    top: 15px;
+    right: 30px;
+  }
+  .showSearch{
+    width: 100%;
+  }
+  .showSearch input{
+    width: 60%;
+  }
+  .emoji{
+    height: 35px;
+    width: 35px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 400px){
+  .navbar div p{
+    font-size: 20px;
+  }
+  .register p{
+    font-size: 15px;
+  }
+  .sign_container{
+    width: 90%;
+    left: 13px;
+  }
+  .sign_header h1{
+    font-size: 28px;
+  }
+  .sign_header{
+    height: 65px;
+  }
+  .navbar div h1{
+    font-size: 19px;
+  }
+  .homepage{
+    top: 110px;
+    left: 15px;
+  }
+  .emoji_div{
+    margin-left: -10px;
+  }
+}
+
