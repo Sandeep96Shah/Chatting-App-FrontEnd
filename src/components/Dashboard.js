@@ -38,20 +38,20 @@ const Dashboard = (props) => {
         setMessage(message + emoji);
       };
      
-      props.dispatch(show_users());
-      props.dispatch(show_friends());
-      if(window.innerWidth<=600){
-          setShowFriends(false);
-      }
+    //   props.dispatch(show_users());
+    //   props.dispatch(show_friends());
+    //   if(window.innerWidth<=600){
+    //       setShowFriends(false);
+    //   }
     
-//    useEffect(() => {
-//         props.dispatch(show_users());
-//         props.dispatch(show_friends());
-//         if(window.innerWidth<=600){
-//             setShowFriends(false);
-//         }
-//         //added the props and name
-//    },[props, search], name)
+   useEffect(() => {
+        props.dispatch(show_users());
+        props.dispatch(show_friends());
+        if(window.innerWidth<=600){
+            setShowFriends(false);
+        }
+        //added the props and name
+   },[props, search])
 
     const { name, _id } = props.location.state.user;
    useEffect(() => {
