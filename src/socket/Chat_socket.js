@@ -17,7 +17,7 @@ export const handleConnect = (name, id, dispatch, from, to) => {
             socket.on('receive_message', function(data){
                 const token = localStorage.getItem('token');
                 const user = jwt_decode(token);
-                if(user._id == data.from){
+                if(user._id === data.from){
                     const receive = {
                         msg : data.message,
                         user_id : from,

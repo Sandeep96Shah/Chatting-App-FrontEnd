@@ -1,4 +1,4 @@
-import { SHOW_FRIENDS, SHOW_USERS, ADD_FRIEND, PRIVATE_MESSAGE, USER, ADD_MESSAGE, SIGNIN_PROGRESS, SIGNIN_SUCCESS, FRIENDSHIP, SIGNIN_FAILURE } from "./actionTypes";
+import { SHOW_FRIENDS, SHOW_USERS, ADD_FRIEND, PRIVATE_MESSAGE, ADD_MESSAGE, SIGNIN_PROGRESS, SIGNIN_SUCCESS, FRIENDSHIP, SIGNIN_FAILURE } from "./actionTypes";
 import { APIUrls } from '../helpers/apis';
 import { getFormBody } from '../helpers/utils';
 import {getAuthTokenFromLocalStorage} from '../helpers/utils';

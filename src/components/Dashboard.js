@@ -38,18 +38,25 @@ const Dashboard = (props) => {
         setMessage(message + emoji);
       };
      
+      props.dispatch(show_users());
+      props.dispatch(show_friends());
+      if(window.innerWidth<=600){
+          setShowFriends(false);
+      }
     
-   useEffect(() => {
-        props.dispatch(show_users());
-        props.dispatch(show_friends());
-        if(window.innerWidth<=600){
-            setShowFriends(false);
-        }
-   },[search])
+//    useEffect(() => {
+//         props.dispatch(show_users());
+//         props.dispatch(show_friends());
+//         if(window.innerWidth<=600){
+//             setShowFriends(false);
+//         }
+//         //added the props and name
+//    },[props, search], name)
 
+    const { name, _id } = props.location.state.user;
    useEffect(() => {
     toast.success(`Welcome ${name}`,{autoClose:3000});
-   },[]);
+   },[name]);
 
    const fuse = new Fuse(props.friends.users, {
     keys: [
@@ -72,11 +79,11 @@ const Dashboard = (props) => {
     }
 
     const sendMessage = (from) => {
-        if(chatroom == null){
+        if(chatroom === null){
             toast.warn("please select your friend to send message!");
             setMessage("");
         }
-        else if(message == ""){
+        else if(message === ""){
             toast.warn("Please Type something!");
         }else{
             props.dispatch(add_message(message, to));
@@ -98,7 +105,7 @@ const Dashboard = (props) => {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        if(characterResults.length==0){
+        if(characterResults.length === 0){
             toast("No user found!");
         }
     }
@@ -109,7 +116,7 @@ const Dashboard = (props) => {
 
     const handleAddFriend = (id) => {
         const index = props.friends.friends.findIndex(friend => friend._id === id);
-        if(index == -1){
+        if(index === -1){
             props.dispatch(makeFriend(props.location.state.user._id, id));
         }else{
             toast.info("Friendship Already Exists!");
@@ -124,8 +131,8 @@ const Dashboard = (props) => {
         sendMessage(_id);
     }
 
-        const { friends, allusers } = props.friends;
-        const { name, _id } = props.location.state.user;
+        const { friends } = props.friends;
+        // const { name, _id } = props.location.state.user;
 
         return (
             <>
@@ -188,7 +195,7 @@ const Dashboard = (props) => {
                         <div className="message">
                             { 
                                 props.messages.messages.map((pm, index) => (
-                                    pm.user_id == _id ? <p key={index} className="self_message">{pm.msg}</p> :
+                                    pm.user_id === _id ? <p key={index} className="self_message">{pm.msg}</p> :
                                     <p key={index} className="other_message">{pm.msg}</p>
                                 ) )
                             }

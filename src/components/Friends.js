@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
     const [ chatroom, setChatroom] = useState();
      useEffect(() => {
         dispatch(getChatroom(to, setChatroom));
-     },[]);
+     },[to, dispatch]);
     return (
         <>
             <div><p onClick={ () => clickHandle(name, chatroom, to, from) }>{name}</p></div>
