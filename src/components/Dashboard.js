@@ -51,7 +51,7 @@ const Dashboard = (props) => {
             setShowFriends(false);
         }
         //added the props and name
-   },[props, search])
+   },[search])
 
     const { name, _id } = props.location.state.user;
    useEffect(() => {
