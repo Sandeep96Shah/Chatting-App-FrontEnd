@@ -37,12 +37,6 @@ const Dashboard = (props) => {
         let emoji = String.fromCodePoint(...codesArray);
         setMessage(message + emoji);
       };
-     
-    //   props.dispatch(show_users());
-    //   props.dispatch(show_friends());
-    //   if(window.innerWidth<=600){
-    //       setShowFriends(false);
-    //   }
 
     const { friends } = props.friends;
     
@@ -52,7 +46,6 @@ const Dashboard = (props) => {
         if(window.innerWidth<=600){
             setShowFriends(false);
         }
-        //added the props and name
         // eslint-disable-next-line
    },[]);
 
