@@ -47,7 +47,7 @@ const Dashboard = (props) => {
             setShowFriends(false);
         }
         // eslint-disable-next-line
-   },[]);
+   },[search]);
 
    console.log("props", props);
 
