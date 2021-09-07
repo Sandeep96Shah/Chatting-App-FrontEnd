@@ -43,6 +43,8 @@ const Dashboard = (props) => {
     //   if(window.innerWidth<=600){
     //       setShowFriends(false);
     //   }
+
+    const { friends } = props.friends;
     
    useEffect(() => {
         props.dispatch(show_users());
@@ -51,7 +53,10 @@ const Dashboard = (props) => {
             setShowFriends(false);
         }
         //added the props and name
-   },[search])
+        // eslint-disable-next-line
+   },[]);
+
+   console.log("props", props);
 
     const { name, _id } = props.location.state.user;
    useEffect(() => {
@@ -131,7 +136,7 @@ const Dashboard = (props) => {
         sendMessage(_id);
     }
 
-        const { friends } = props.friends;
+        // const { friends } = props.friends;
         // const { name, _id } = props.location.state.user;
 
         return (

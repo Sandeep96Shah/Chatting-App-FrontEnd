@@ -309,21 +309,19 @@ h4{
 }
 .message{
   width: 100%;
-  height: 61vh;
+  height: 67vh;
   padding: 40px 30px 30px 30px;
   background-color: aliceblue;
   border-bottom: 1px solid black;
   overflow-y:scroll;
 }
 .type_message{
-  height: 10vh;
-  width: 70%;
+  height: 12vh;
+  width: 100%;
   background-color: lightsteelblue;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  position:absolute;
-  bottom:0px;
 }
 .type_message input{
   height: 32px;
@@ -576,6 +574,9 @@ h4{
   .close{
     left: 20%;
   }
+  .message{
+    height:63vh ;
+  }
 }
 
 @media screen and (max-width: 700px){
@@ -671,6 +672,9 @@ h4{
   }
   .emoji_div{
     width: 90%;
+  }
+  .type_message{
+    width: 100%;
   }
 }
 @media screen and (max-width: 500px){
